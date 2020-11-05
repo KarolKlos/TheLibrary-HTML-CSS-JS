@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Special Elite', serif;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* DRY: CSS variables for the colors instead of specyfi then each time */
+:root {
+  --primary-color: brown;
+  --secondary-color: #eee;
+  --white-color: #fff;
+  --grey-color: #555;
+  --light-grey-color: #777;
+}
+
+/* DRY: I'm using flex box to menage the layout and in most cases I will need to center the elements perfectly and in order to avoid writing them everytime I will insert them here and add class ".center" to HTML element  */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* changing background color using the variable */
+.container {
+  background-color: var(--secondary-color);
+  margin: 3.5rem;
+  box-shadow: 0 1rem 3rem var(--grey-color);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////
+///// HEADER */
+
+.header {
+  width: 100%;
+  height: calc(100vh - 7rem);
+  background: linear-gradient(rgba(58, 26, 11, 0.5),rgba(58, 26, 11, 0.5)), url(images/header.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-text {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-left: 3rem;
+  text-shadow: 0 0.5rem 0.3rem #000;
+}
+
+.heading {
+  font-size: 8rem;
+  font-weight: 200;
+  color: rgb(255, 255, 210);
+}
+
+.header-paragraph {
+  font-size: 3rem;
+  font-weight: 500;
+  color: rgb(255, 255, 173);
+  max-width: 70rem;
+}
+
+.logo {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+}
+
+.logo h1 {
+  display: flex;
+}
+
+.logo h1 span {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  text-transform: uppercase;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0.5rem;
+  border-radius: 50%;
+}
+
+.logo h1 span:nth-child(1) {
+  animation-name: drop-letters;
+  animation-duration: 5s;
+  animation-delay: 0.1s;
+  animation-iteration-count: infinite;
+}
+
+.logo h1 span:nth-child(2) {
+  animation: drop-letters 5s 0.2s infinite;
+}
+
+.logo h1 span:nth-child(3) {
+  animation: drop-letters 5s 0.3s infinite;
+}
+
+.logo h1 span:nth-child(4) {
+  animation: drop-letters 5s 0.4s infinite;
+}
+
+.logo h1 span:nth-child(5) {
+  animation: drop-letters 5s 0.5s infinite;
+}
+
+.logo h1 span:nth-child(6) {
+  animation: drop-letters 5s 0.6s infinite;
+}
+
+.logo h1 span:nth-child(7) {
+  animation: drop-letters 5s 0.7s infinite;
+}
+
+.logo h1 span:nth-child(8) {
+  animation: drop-letters 5s 0.8s infinite;
+}
+
+.logo h1 span:nth-child(9) {
+  animation: drop-letters 5s 0.9s infinite;
+}
+
+.logo h1 span:nth-child(10) {
+  animation: drop-letters 5s 1s infinite;
+}
+
+@keyframes drop-letters {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-50%);
+  }
+  20% {
+    transform: translateY(50%);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////
+///// POPULAR BOOKS */
+
+
+
